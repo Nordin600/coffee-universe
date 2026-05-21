@@ -125,7 +125,6 @@ select {
   cursor: pointer;
 }
 
-/* Фіксована шапка: тримаємо її легкою, але не даємо їй з'їсти перший екран */
 .site-header {
   position: fixed;
   top: 0;
@@ -174,18 +173,24 @@ select {
 
 .logo-img {
   display: block;
-  max-height: 72px;
+  max-height: 46px;
   width: auto;
   object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo-text {
   font-family: var(--font-heading);
-  font-size: 1.28rem;
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.07em;
+  font-stretch: condensed;
   color: var(--color-ivory);
+  display: inline-block;
+  transform: scaleX(0.92);
+  transform-origin: left center;
 }
 
 .logo-text span {
@@ -237,17 +242,6 @@ select {
   margin: 0 auto;
   padding: var(--section-padding);
   scroll-margin-top: calc(var(--header-height) + 1rem);
-}
-
-/* Трохи світла під кожною секцією, щоб сторінка не була плоскою */
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 2rem 0;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 3rem;
-  opacity: 0.85;
 }
 
 #essence::before {
@@ -342,7 +336,6 @@ h3 {
   letter-spacing: -0.045em;
 }
 
-/* Hero має власний padding-top, бо шапка fixed */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -1072,14 +1065,6 @@ h3 {
   .logo-link {
     gap: 1rem;
     padding: 0.3rem 0;
-  }
-
-  .logo-img {
-    max-height: 75px;
-  }
-
-  .logo-text {
-    font-size: 1.45rem;
   }
 
   .nav-list {

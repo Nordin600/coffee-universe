@@ -950,6 +950,7 @@ h3 {
   width: auto;
   object-fit: contain;
   margin-bottom: 1.15rem;
+  border-radius: 14px;
 }
 
 .footer-quote {
